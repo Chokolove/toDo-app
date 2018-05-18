@@ -1,0 +1,7 @@
+.container{
+  margin: 20px;
+}
+.border-blue{
+  border: solid 1px blue;
+  text-align: center;
+}
