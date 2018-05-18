@@ -3,5 +3,22 @@
 }
 .border-blue{
   border: solid 1px blue;
-  text-align: center;
+  text-align: left;
+}
+.border-red{
+  border: solid 1px red;
+  text-align: left;
+}
+.border-green{
+  border: solid 1px green;
+  text-align: left;
+}
+.space{
+  padding: 20px;
+}
+.strikethrough{
+  text-decoration: line-through;
+}
+ul li.checked {
+    text-decoration: line-through;
 }
