@@ -15,7 +15,7 @@ $("document").ready(function(){
     for (var i = 0; i<btns.length; i++){
       btns[i].onclick = function(){
         var parnt = this.parentElement;
-        parnt.style.display = "none";
+        parnt.remove();
       }
     }
     document.getElementById("textbox").value = "";
