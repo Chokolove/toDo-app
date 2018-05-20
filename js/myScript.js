@@ -1,28 +1,16 @@
 $("document").ready(function(){
-  $("#btn").on("click",function(){
-    var ul = document.getElementById("list");
-    var chore = document.getElementById("textbox").value;
-    var li = document.createElement("li");
-    var btn = document.createElement("button");
-    li.appendChild(document.createTextNode(chore));
-    btn.innerText = "X"
-    btn.className = "delete";
-    li.appendChild(btn);
-    ul.appendChild(li);
-
-
-    var btns = document.getElementsByClassName('delete');
-    for (var i = 0; i<btns.length; i++){
-      btns[i].onclick = function(){
-        var parnt = this.parentElement;
-        parnt.remove();
-      }
-    }
-    document.getElementById("textbox").value = "";
-    document.getElementById("textbox").focus();
+  $("#btn").click(function(){
+    var btn = "<button>X</button>";
+    var li = "<li>"+$("#textbox").val()+"<button class='delete'>X</button></li>"
+    $("#list").append(li);
+    $(".delete").click(function(){
+      this.parentElement.remove();
+    })
+    $("#textbox").val("");
+    $("#textbox").focus();
   });
 
-  $("ul").on("click", function(ev) {
+  $("ul").click(function(ev) {
     if (ev.target.tagName === 'LI') {
       ev.target.classList.toggle('checked');
     };
