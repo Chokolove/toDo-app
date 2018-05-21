@@ -15,7 +15,7 @@ $('document').ready(function(){
     li.append(span)
     li.append(btn)
     $('#list').append(li)
-    var total = $('li').length
+    counter()
     $('#textbox').val('')
     $('#textbox').focus()
   })
